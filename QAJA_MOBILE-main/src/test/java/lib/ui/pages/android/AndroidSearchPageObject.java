@@ -2,8 +2,11 @@ package lib.ui.pages.android;
 
 import lib.ui.MainPageObject;
 import lib.ui.pages.interfaces.ISearchPageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import static org.junit.Assert.assertEquals;
 
 public class AndroidSearchPageObject extends MainPageObject implements ISearchPageObject {
 
@@ -29,7 +32,8 @@ public class AndroidSearchPageObject extends MainPageObject implements ISearchPa
                 "Cannot find result: '" + text + "'"
         );
 
-        expectedResult.click();
+        expectedResult.getText();
+
     }
 
     private static String getResultElementByText(String text) {

@@ -12,7 +12,7 @@ import org.junit.Test;
 public class SearchTest extends CoreTestCase {
 
     @Test
-    public void testSearch() {
+    public void noResults() {
 
         IOnboardingPageObject onboardingPage = OnboardingPageFactory.get(this.driver);
         IStartPageObject startPage = StartPageFactory.get(this.driver);
@@ -20,8 +20,8 @@ public class SearchTest extends CoreTestCase {
 
         onboardingPage.skipOnboarding();
         startPage.initSearch();
-        searchPage.findByText("Java");
-        searchPage.selectByText("Island of Indonesia");
+        searchPage.findByText("wfewfewfwegweg");
+        searchPage.selectByText("No results found");
     }
 
 }
